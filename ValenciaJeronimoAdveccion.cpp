@@ -5,13 +5,13 @@
 const int nx=80;
 double x[nx];
 
-int nt = 30;
+int nt = 100;
 
 double c=1.;
 double x_min = 0;
 double x_max = 2;
 double delta_x = (x_max-x_min)/nx;
-double delta_t = (x_max-x_min)/(2*nx*c);
+double delta_t = (x_max-x_min)/(6*nx*c);
 double t_final = nt*delta_t;
 
 int main()
@@ -57,11 +57,11 @@ int main()
 		
 	}
 
-	std::cout << "Tiempo=" << " " << t_final << std::endl;
+	std::cout << "Tiempo=" << " " << t_final << " " << "0"<< std::endl;
 
 	for(int l=0;l<nx;l++)
 	{
-		std::cout << l*delta_x << " " << u_presente[l] << std::endl;
+		std::cout << l*delta_x << " " << u_presente[l] << " " << u_inicial[l]<< std::endl;
 	}
 	
 	
